@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amullyajit Nandi | Full Stack Engineer & AI/VR Developer</title>
+  <meta name="description" content="Portfolio of Amullyajit Nandi - B.Tech CSE (IoTCSBT) at IEM Kolkata. Full Stack Engineer, AI/ML Developer, and 3D WebXR VR Specialist.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <!-- Three.js CDN for 3D WebGL Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Background 3D Canvas -->
+  <canvas id="bgCanvas3D"></canvas>
+
+  <!-- 3D Opening Splash Loader Curtain -->
+  <div id="introLoader" class="intro-loader">
+    <div class="loader-content">
+      <div id="loader3DBox" class="loader-3d-box"></div>
+      <h2 class="loader-title">AMULLYAJIT NANDI</h2>
+      <div class="loader-subtitle">
+        <div class="loader-tags-wrapper">
+          <span class="loader-badge badge-fullstack">✦ FULL-STACK ARCHITECT</span>
+          <span class="loader-badge badge-ai">⚡ AI &amp; 3D WEBXR</span>
+        </div>
+        <div class="loader-status-code">
+          <span class="pulse-green-dot"></span> // ARCHITECTING NEXT-GEN DIGITAL EXPERIENCES
+        </div>
+      </div>
+      <div class="loader-bar-box">
+        <div id="loaderBar" class="loader-bar"></div>
+      </div>
+      <div id="loaderPercent" class="loader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- Floating Segmented Header Navigation -->
+  <header class="header-container">
+    <nav class="navbar">
+      <div class="nav-links-wrapper">
+        <a href="#hero" class="nav-item brand">Amullyajit</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#awards" class="nav-item">Awards</a>
+        <a href="#connect" class="nav-item">Connect</a>
+        <button id="resumeBtn" class="nav-item resume-btn">RESUME</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-heading">
+          I'm <span class="badge-pink">Amullyajit</span> from <span class="badge-blue">India</span>
+        </h1>
+        <p class="hero-subtitle">
+          Pre-final-year B.Tech CSE (IoTCSBT) student at IEM Kolkata. Hands-on full stack developer skilled in Java, Python, Spring Boot, React, AI/ML, and 3D WebXR VR systems.
+        </p>
+        <div class="hero-ctas">
+          <a href="#connect" class="btn-brutal btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Get in touch
+          </a>
+          <a href="#projects" class="btn-brutal btn-secondary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            View projects
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-avatar-wrapper">
+        <div class="avatar-card">
+          <img src="assets/amullyajit_avatar.jpg" alt="Amullyajit Nandi Avatar" class="avatar-img">
+          <div class="avatar-badge">
+            <span class="pulse-dot"></span>
+            <span>Open for Software Roles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Marquee Ticker -->
+    <section class="marquee-container" aria-label="Technologies Ticker">
+      <div class="marquee-track">
+        <!-- Sequence 1 -->
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#6929C4; color:#FFF">QK</span> Qiskit (Quantum)</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#007396; color:#FFF">JV</span> Java</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#6DB33F; color:#FFF">SB</span> Spring Boot</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#3776AB; color:#FFF">PY</span> Python</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#61DAFB">RE</span> React</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#EF2D5E; color:#FFF">VR</span> WebXR (A-Frame)</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#000; color:#FFF">FL</span> Flask</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#00758F; color:#FFF">SQL</span> MySQL</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#47A248; color:#FFF">MG</span> MongoDB</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#38BDF8">TW</span> Tailwind CSS</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#F7931E; color:#FFF">SK</span> Scikit-Learn</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#00599C; color:#FFF">C++</span> C++</div>
+
+        <!-- Sequence 2 (Duplicate for smooth looping) -->
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#6929C4; color:#FFF">QK</span> Qiskit (Quantum)</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#007396; color:#FFF">JV</span> Java</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#6DB33F; color:#FFF">SB</span> Spring Boot</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#3776AB; color:#FFF">PY</span> Python</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#61DAFB">RE</span> React</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#EF2D5E; color:#FFF">VR</span> WebXR (A-Frame)</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#000; color:#FFF">FL</span> Flask</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#00758F; color:#FFF">SQL</span> MySQL</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#47A248; color:#FFF">MG</span> MongoDB</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#38BDF8">TW</span> Tailwind CSS</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#F7931E; color:#FFF">SK</span> Scikit-Learn</div>
+        <div class="tech-chip"><span class="tech-badge-icon" style="background:#00599C; color:#FFF">C++</span> C++</div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <p class="section-desc">Passionate pre-final-year CS engineer building secure backend systems, AI diagnostics, and immersive VR experiences.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="brutal-card">
+          <h3 style="font-size: 1.8rem; margin-bottom: 16px;">Building scalable software &amp; immersive web systems</h3>
+          <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 16px;">
+            I am a B.Tech Computer Science student at <strong>Institute of Engineering and Management (IEM), Kolkata</strong> specializing in Internet of Things, Cybersecurity, and Blockchain Technology.
+          </p>
+          <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 24px;">
+            From researching Quantum Kolmogorov–Arnold Networks (QKANs) at TCG CREST to building core banking applications and 60 FPS 3D VR driving simulators, I focus on building robust, high-performance systems.
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <span class="tag-pill" style="background: var(--accent-purple); color:#FFF;">Quantum ML &amp; Qiskit</span>
+            <span class="tag-pill" style="background: var(--accent-pink); color:#FFF;">Full-Stack Java &amp; Spring</span>
+            <span class="tag-pill" style="background: var(--accent-blue); color:#FFF;">AI/ML &amp; SHAP Explainability</span>
+            <span class="tag-pill" style="background: var(--accent-yellow); color:#000;">WebXR 3D VR Systems</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">8.20</div>
+            <div class="stat-label">CGPA at IEM Kolkata</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5x</div>
+            <div class="stat-label">National Hackathon Finalist</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1st</div>
+            <div class="stat-label">Auth0 Track Winner (PEC Hacks 3.0)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">93.1%</div>
+            <div class="stat-label">WBBSE Benchmark</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Work Experience</h2>
+        </div>
+        <p class="section-desc">Hands-on software engineering traineeships, quantum computing research, and enterprise platform development.</p>
+      </div>
+
+      <!-- Experience 1: TCG CREST (CQuERE) -->
+      <div class="brutal-card" style="margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+          <div>
+            <h3 style="font-size: 1.6rem; color: var(--text-main);">Research Intern – Quantum Computing &amp; Quantum ML</h3>
+            <h4 style="font-size: 1.15rem; color: var(--accent-purple); font-weight: 700;">TCG CREST (CQuERE)</h4>
+          </div>
+          <span class="tag-pill" style="background: var(--accent-pink); color: #FFF; font-size: 0.9rem; padding: 6px 14px;">May 2026 – July 2026</span>
+        </div>
+        <p style="font-size: 1.05rem; margin-bottom: 14px; font-weight: 700; color: var(--text-main);">
+          Focus: Fault-Tolerant Quantum Machine Learning &amp; Quantum Circuit Engineering
+        </p>
+        <ul style="padding-left: 20px; font-size: 1rem; color: var(--text-muted); line-height: 1.8;">
+          <li>Conducted research on <strong>Quantum Kolmogorov–Arnold Networks (QKANs)</strong> for Fault-Tolerant Quantum Machine Learning and Multivariate Quantum State Preparation.</li>
+          <li>Studied <strong>Kolmogorov–Arnold Networks (KANs)</strong>, Basis Encoding, Block Encoding, QSVT, and CHEB-QKAN architecture through contemporary research literature.</li>
+          <li>Implemented Basis Encoding and quantum state visualization using <strong>Qiskit</strong>, including quantum circuit construction and Bloch sphere analysis.</li>
+          <li>Developed and evaluated a Classical KAN model on the Iris dataset, achieving strong classification performance across multiple evaluation metrics.</li>
+          <li>Prepared technical presentations, literature reviews, and a comprehensive research report on Quantum Machine Learning methodologies.</li>
+        </ul>
+      </div>
+
+      <!-- Experience 2: Sofzenix IT Solutions LLP -->
+      <div class="brutal-card" style="margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+          <div>
+            <h3 style="font-size: 1.6rem; color: var(--text-main);">Full Stack Engineer Trainee</h3>
+            <h4 style="font-size: 1.15rem; color: var(--accent-blue); font-weight: 700;">Sofzenix IT Solutions LLP • Remote (Andhra Pradesh)</h4>
+          </div>
+          <span class="tag-pill" style="background: var(--accent-yellow); font-size: 0.9rem; padding: 6px 14px;">Oct 2025 – March 2026</span>
+        </div>
+        <p style="font-size: 1.05rem; margin-bottom: 14px; font-weight: 700; color: var(--text-main);">
+          Project: E-Bank23 Core Banking Web Application
+        </p>
+        <ul style="padding-left: 20px; font-size: 1rem; color: var(--text-muted); line-height: 1.8;">
+          <li>Built a comprehensive core banking web application using <strong>Java, Spring Boot, Spring Security, Hibernate, MySQL, and Thymeleaf</strong> to digitalize manual financial operations.</li>
+          <li>Enhanced operational efficiency in managing members, term deposits, and full-cycle loan applications.</li>
+          <li>Designed an ACID-compliant transaction and voucher processing architecture using Spring Security, ensuring secure and reliable financial ledger operations while safeguarding sensitive user data from unauthorized access.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <p class="section-desc">Engineering 3D WebXR VR simulators, AI health diagnostics, and banking systems.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">All Projects</button>
+        <button class="tab-btn" data-filter="vr">3D WebXR / VR</button>
+        <button class="tab-btn" data-filter="ai">AI / ML</button>
+        <button class="tab-btn" data-filter="java">Java & Backend</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: Yatri_AI -->
+        <div class="brutal-card project-card" data-category="vr">
+          <div class="project-thumbnail-box">
+            <img src="assets/project_vr.jpg" alt="Yatri_AI 3D VR Simulator">
+          </div>
+          <div class="project-tags">
+            <span class="tag-pill" style="background: var(--accent-pink); color:#FFF;">A-Frame (WebXR)</span>
+            <span class="tag-pill" style="background: var(--accent-blue); color:#FFF;">AI Voice Copilot</span>
+            <span class="tag-pill">Web Speech API</span>
+          </div>
+          <h3 class="project-title">Yatri_AI (3D VR Simulator)</h3>
+          <p class="project-desc">Browser-based 3D VR driving simulator with an interactive cockpit, manual/automatic transmission, 60 FPS physics engine, and AI voice copilot ignition/gear control.</p>
+          <div class="project-links">
+            <button class="btn-brutal btn-primary demo-modal-trigger" 
+              data-title="Yatri_AI (3D WebXR Simulator)" 
+              data-desc="Built with HTML, CSS, JavaScript, A-Frame (WebXR), Web Audio API, and Web Speech API. Features a custom 60 FPS physics engine handling RPM, torque, steering, braking, drag, and collision detection across 5 modules with live telemetry HUD tracking."
+              style="padding: 8px 16px; font-size: 0.9rem;">View Details</button>
+            <a href="https://github.com/amullyajit" target="_blank" class="btn-brutal btn-secondary" style="padding: 8px 14px; font-size: 0.9rem;">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2: HEPASENSE -->
+        <div class="brutal-card project-card" data-category="ai">
+          <div class="project-thumbnail-box">
+            <img src="assets/project_hepasense.jpg" alt="HEPASENSE AI Health Predictor">
+          </div>
+          <div class="project-tags">
+            <span class="tag-pill" style="background: var(--accent-yellow);">Flask</span>
+            <span class="tag-pill" style="background: var(--accent-green);">Scikit-Learn</span>
+            <span class="tag-pill">SHAP Explainability</span>
+          </div>
+          <h3 class="project-title">HEPASENSE AI Diagnostics</h3>
+          <p class="project-desc">AI-powered liver health predictor trained on a 10,000+ record dataset using Random Forest with SHAP explainability charts, probability gauges, and PDF exports.</p>
+          <div class="project-links">
+            <button class="btn-brutal btn-primary demo-modal-trigger" 
+              data-title="HEPASENSE AI Diagnostics" 
+              data-desc="Developed using Flask, Scikit-learn, SHAP, Chart.js, ReportLab, and Pandas. Features transparent ML explainability, prediction history logging, and automated medical report generation."
+              style="padding: 8px 16px; font-size: 0.9rem;">View Details</button>
+            <a href="https://github.com/amullyajit" target="_blank" class="btn-brutal btn-secondary" style="padding: 8px 14px; font-size: 0.9rem;">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3: BuildMyCity VR -->
+        <div class="brutal-card project-card" data-category="vr">
+          <div class="project-thumbnail-box">
+            <img src="assets/project_city.jpg" alt="BuildMyCity 3D VR Urban Simulator">
+          </div>
+          <div class="project-tags">
+            <span class="tag-pill" style="background: var(--accent-purple); color:#FFF;">WebXR</span>
+            <span class="tag-pill" style="background: var(--accent-blue); color:#FFF;">A-Frame</span>
+            <span class="tag-pill">Spatial 3D</span>
+          </div>
+          <h3 class="project-title">BuildMyCity VR</h3>
+          <p class="project-desc">3D VR smart-city simulation for real-time urban planning. Tracks live metrics (happiness, pollution, energy, mobility) across multi-turn scenarios.</p>
+          <div class="project-links">
+            <button class="btn-brutal btn-primary demo-modal-trigger" 
+              data-title="BuildMyCity VR" 
+              data-desc="Engineered a dynamic city engine in WebXR balancing sustainability and population dynamics. Includes VR controller support, audio feedback, and multi-turn resource algorithms."
+              style="padding: 8px 16px; font-size: 0.9rem;">View Details</button>
+            <a href="https://github.com/amullyajit" target="_blank" class="btn-brutal btn-secondary" style="padding: 8px 14px; font-size: 0.9rem;">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 4: E-Bank23 Core Banking -->
+        <div class="brutal-card project-card" data-category="java">
+          <div class="project-thumbnail-box">
+            <img src="assets/project_ebank.jpg" alt="E-Bank23 Core Banking Platform">
+          </div>
+          <div class="project-tags">
+            <span class="tag-pill" style="background: #007396; color:#FFF;">Java</span>
+            <span class="tag-pill" style="background: #6DB33F; color:#FFF;">Spring Boot</span>
+            <span class="tag-pill">Spring Security</span>
+          </div>
+          <h3 class="project-title">E-Bank23 Core Banking</h3>
+          <p class="project-desc">ACID-compliant transaction processing system handling member management, term deposits, and full-cycle loans with Spring Security & MySQL.</p>
+          <div class="project-links">
+            <button class="btn-brutal btn-primary demo-modal-trigger" 
+              data-title="E-Bank23 Core Banking Platform" 
+              data-desc="Enterprise banking solution designed during traineeship at Sofzenix IT Solutions. Implements ACID-compliant financial ledger, voucher processing, and encrypted user data isolation."
+              style="padding: 8px 16px; font-size: 0.9rem;">View Details</button>
+            <a href="https://github.com/amullyajit" target="_blank" class="btn-brutal btn-secondary" style="padding: 8px 14px; font-size: 0.9rem;">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <p class="section-desc">Academic background in Computer Science, IoT, Cybersecurity, and Blockchain.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- IEM Kolkata -->
+        <div class="brutal-card" style="border-left: 6px solid var(--accent-blue);">
+          <span class="tag-pill" style="background: var(--accent-blue); color:#FFF; margin-bottom: 12px; display:inline-block;">Oct 2023 - July 2027</span>
+          <h3 style="font-size: 1.5rem; margin-bottom: 6px;">Institute of Engineering and Management (IEM), Kolkata</h3>
+          <p style="font-weight: 700; font-size: 1.05rem; color: var(--text-main); margin-bottom: 8px;">
+            B.Tech in Computer Science and Engineering (Internet of Things & Cybersecurity including Blockchain Technology)
+          </p>
+          <p style="font-size: 1.2rem; font-weight: 900; color: var(--accent-pink);">
+            CGPA: 8.20 / 10
+          </p>
+        </div>
+
+        <!-- High School Education -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div class="brutal-card" style="padding: 20px;">
+            <span class="tag-pill" style="background: var(--accent-yellow); margin-bottom: 8px; display:inline-block;">Apr 2021 - Feb 2023</span>
+            <h4 style="font-size: 1.2rem;">Rampurhat Jitendralal Vidyabhaban</h4>
+            <p style="color: var(--text-muted);">WBCHSE (Higher Secondary) • <strong>82.60%</strong></p>
+          </div>
+
+          <div class="brutal-card" style="padding: 20px;">
+            <span class="tag-pill" style="background: var(--accent-green); margin-bottom: 8px; display:inline-block;">Apr 2015 - Feb 2021</span>
+            <h4 style="font-size: 1.2rem;">Turigram HariPada High School</h4>
+            <p style="color: var(--text-muted);">WBBSE (Secondary) • <strong>93.14%</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Breakdown Section -->
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Skills & Competencies</h2>
+        </div>
+        <p class="section-desc">Technical domain expertise across language syntax, ML frameworks, databases, and core CS.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="brutal-card">
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--accent-pink);">💻 Languages</h3>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="tag-pill">Java</span>
+            <span class="tag-pill">Python</span>
+            <span class="tag-pill">C++</span>
+            <span class="tag-pill">C</span>
+            <span class="tag-pill">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="brutal-card">
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--accent-blue);">🌐 Web & Frameworks</h3>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="tag-pill">Spring Boot</span>
+            <span class="tag-pill">React</span>
+            <span class="tag-pill">Flask</span>
+            <span class="tag-pill">A-Frame (WebXR)</span>
+            <span class="tag-pill">Tailwind CSS</span>
+            <span class="tag-pill">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="brutal-card">
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--accent-purple);">🤖 AI, ML & Data</h3>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="tag-pill">Scikit-learn</span>
+            <span class="tag-pill">OpenCV</span>
+            <span class="tag-pill">Generative AI</span>
+            <span class="tag-pill">LLMs</span>
+            <span class="tag-pill">SHAP</span>
+            <span class="tag-pill">Chart.js / Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="brutal-card">
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--accent-orange);">🗄️ Databases & Tools</h3>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="tag-pill">MySQL</span>
+            <span class="tag-pill">MongoDB</span>
+            <span class="tag-pill">Git & GitHub</span>
+            <span class="tag-pill">VS Code</span>
+            <span class="tag-pill">Hibernate</span>
+            <span class="tag-pill">Spring Security</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Achievements Section -->
+    <section id="awards" class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Awards & Certifications</h2>
+        </div>
+        <p class="section-desc">Recognitions from government security hackathons and global course certifications.</p>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="brutal-card">
+          <span class="award-badge">🥈 2nd Position Winner</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Decoding Cyber Attacks Through AI & Animations</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Organized by the Cyber Security Centre of Excellence, Department of Information Technology & Electronics, Government of West Bengal.
+          </p>
+        </div>
+
+        <div class="brutal-card">
+          <span class="award-badge" style="background: var(--accent-yellow);">🏆 Track Winner & 5x Finalist</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 8px;">PEC HACKS 3.0 (Auth0 Track Winner)</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Winner of the Auth0 Identity & Security track, and 5-times national level hackathon finalist.
+          </p>
+        </div>
+
+        <div class="brutal-card" style="grid-column: 1 / -1;">
+          <span class="award-badge" style="background: var(--accent-blue); color:#FFF;">📜 Certification</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Introduction to Applied Cryptography</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Issued by <strong>University of Colorado System</strong> (Coursera). Mastered modern cryptographic primitives, key exchanges, and security protocols.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect / Contact Section -->
+    <section id="connect" class="section">
+      <div class="contact-section-inner">
+        <div class="contact-info">
+          <h2>Let's build something extraordinary together!</h2>
+          <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 24px;">
+            Open to software engineering roles, full-stack opportunities, AI/VR research, and tech collaborations.
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+            <button id="copyEmailBtn" class="btn-brutal btn-secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span id="emailText">amullyajitn@gmail.com</span>
+            </button>
+
+            <a href="tel:+917679641782" class="social-btn" style="width:fit-content;">
+              📞 +91-7679641782
+            </a>
+          </div>
+
+          <div class="social-links-brutal">
+            <a href="https://github.com/amullyajit" target="_blank" class="social-btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/amullyajit-nandi-06ba2028a" target="_blank" class="social-btn">LinkedIn</a>
+          </div>
+        </div>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <!-- Web3Forms Access Key (Free instant email delivery to amullyajitn@gmail.com) -->
+          <input type="hidden" name="access_key" value="YOUR_FREE_WEB3FORMS_KEY">
+          <input type="hidden" name="subject" value="⚡ New Portfolio Message for Amullyajit!">
+          <input type="hidden" name="redirect" value="https://web3forms.com/success">
+          
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Rivera" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Your Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="alex@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Hi Amullyajit, I'd like to talk about..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-brutal btn-primary" style="width: 100%; justify-content: center;">
+            Send Message 🚀
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Amullyajit Nandi • Built with Neo-Brutalism & Modern Web Tech.</p>
+  </footer>
+
+  <!-- Reusable Modal Window -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modalCloseBtn" class="modal-close-btn">&times;</button>
+      <h2 id="modalTitle" style="font-size: 1.8rem; margin-bottom: 16px;">Modal Title</h2>
+      <div id="modalBody" style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.7;">
+        Modal content goes here.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div id="toastNotification" class="toast-notification">
+    Notification message here!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
